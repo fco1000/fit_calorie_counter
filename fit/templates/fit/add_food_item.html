@@ -1,0 +1,12 @@
+{% extends 'fit/base.html' %}
+{% block title %}Add food{% endblock title %}
+{% block content %}
+{% load crispy_forms_tags %}
+<form action="" method="POST">
+    <Legend>Add food Item</Legend>
+    Add the food items you've consumed so far
+    {% csrf_token %}
+    {{form|crispy}}
+    <input type="submit" class="btn btn-success" value="submit">
+</form>
+{% endblock %}

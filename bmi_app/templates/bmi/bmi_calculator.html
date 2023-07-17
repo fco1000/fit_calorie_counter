@@ -1,0 +1,24 @@
+{% extends 'fit/base.html' %}
+{% block title %}BMI Calculator{% endblock title %}
+{% block content %}
+
+{% load crispy_forms_tags %}
+{% if user.is_authenticated %}
+<div class="d-flex">
+    <div class="container">
+    <h1>Your BMI Details:</h1>
+    <p> <strong>Gender:</strong> {{ bmi.get_gender_display }}</p>
+    <p> <strong>Height:</strong> {{ bmi.height }} cm</p>
+    <p> <strong>Weight:</strong> {{ bmi.weight }} kg</p>
+    <p> <strong>Rate of Activity:</strong> {{ bmi.get_rate_of_activity_display }}</p>
+    <p> <strong>BMI:</strong> {{ bmi.bmi }}</p>
+    <br>
+    </div> 
+    <div class="ms-auto justify-content-end">
+      <a href="{% url 'update_bmi' bmi.id %}" class="btn btn-info text-light" style="font-size: 25px;">Update BMI</a>
+    </div>
+   </div> 
+    
+  
+  {% endif %}
+{% endblock content %}

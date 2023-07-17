@@ -1,0 +1,125 @@
+{% extends 'fit/base.html' %}
+{% block title %}Admin{% endblock title %}
+{% block content %}
+        <div class="flex-box-row">
+            <h5 id="heading">CUSTOMERS:</h5>
+            <br>
+            <br>
+            <div class="card card-body">
+               <table class="table table-sm">
+                    <tr>
+                        <th>Customer</th>
+                        <th>Email</th>
+                    </tr>
+                    {% for cust in customers %}
+                    <tr>
+                        <td>{{cust.name}} </td>
+                        <td> {{cust.email}} </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <br><br>
+    <h4>List of available food items:</h4>
+
+        <div class="flex-box-row">
+            <h5 id="heading">Breakfast</h5>
+               <table class="table table-sm">
+                    <tr>
+                        <th>Name</th>
+                        <th>Carbs</th>
+                        <th>Fats</th>
+                        <th>Protien</th>
+                        <th>Calorie</th>
+                        
+                    </tr>
+                   {% for items in breakfast %}
+                    <tr>
+                        <td>{{items.name}} </td>
+                        <td>{{items.carbohydrate}} </td>
+                        <td>{{items.fats}} </td>
+                        <td>{{items.protein}} </td>
+                        <td>{{items.calorie}} </td>
+                        </tr>
+                        
+                    {% endfor %}
+                </table>
+        </div>
+<br>
+
+        <div class="flex-box-row">
+            <h5 id="heading">Lunch</h5>
+             <table class="table table-sm">
+                    <tr>
+                        <th>Name</th>
+                        <th>Carbs</th>
+                        <th>Fats</th>
+                        <th>Protien</th>
+                        <th>Calorie</th>
+                        
+                    </tr>
+                   {% for items in lunch %}
+                    <tr>
+                        <td>{{items.name}} </td>
+                        <td>{{items.carbohydrate}} </td>
+                        <td>{{items.fats}} </td>
+                        <td>{{items.protein}} </td>
+                        <td>{{items.calorie}} </td>
+                        </tr>
+                        
+                    {% endfor %}
+                </table>
+        </div>
+        <br>
+
+        <div class="flex-box-row">
+            <h5 id="heading">Snacks</h5>
+                <table class="table table-sm">
+                    <tr>
+                        <th>Name</th>
+                        <th>Carbs</th>
+                        <th>Fats</th>
+                        <th>Protien</th>
+                        <th>Calorie</th>
+                        
+                    </tr>
+                   {% for items in snacks %}
+                    <tr>
+                        <td>{{items.name}} </td>
+                        <td>{{items.carbohydrate}} </td>
+                        <td>{{items.fats}} </td>
+                        <td>{{items.protein}} </td>
+                        <td>{{items.calorie}} </td>
+                        </tr>
+                        
+                    {% endfor %}
+                </table>
+        </div>
+        <br>
+
+        <div class="flex-box-row">
+            <h5 id="heading">Dinner</h5>
+                <table class="table table-sm">
+                    <tr>
+                        <th>Name</th>
+                        <th>Carbs</th>
+                        <th>Fats</th>
+                        <th>Protien</th>
+                        <th>Calorie</th>
+                        
+                    </tr>
+                   {% for items in dinner %}
+                    <tr>
+                        <td>{{items.name}} </td>
+                        <td>{{items.carbohydrate}} </td>
+                        <td>{{items.fats}} </td>
+                        <td>{{items.protein}} </td>
+                        <td>{{items.calorie}} </td>
+                        </tr>
+                        
+                    {% endfor %}
+                </table>
+        </div>
+<br>
+{% endblock content %}
