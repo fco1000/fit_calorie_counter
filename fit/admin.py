@@ -3,7 +3,8 @@ from .models import (
     foodItem,
     userFoodItem,
     Category,
-    Customer
+    Customer,
+    calorie
 )
 # Register your models here.
 class foodAdmin(admin.ModelAdmin):
@@ -16,3 +17,4 @@ admin.site.register(foodItem, foodAdmin)
 admin.site.register(userFoodItem)
 admin.site.register(Category)
 admin.site.register(Customer)
+admin.site.register(calorie)

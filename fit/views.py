@@ -3,11 +3,12 @@ from .models import (
     Category,
     Customer,
     foodItem,
-    userFoodItem
+    userFoodItem,
+    calorie
 )
 from django.http import HttpResponse    
 from users.models import user as user
-from .forms import adduserFoodItemForm,FoodItemForm
+from .forms import adduserFoodItemForm,FoodItemForm,calorieForm
 from django.contrib.auth.decorators import login_required
 from users.decorators.decorators import admin_only,allowed_users
 from .filters import foodItemFilter
@@ -76,34 +77,87 @@ def addFoodItemView(request):
         if request.method == 'POST':
             form = adduserFoodItemForm(request.POST)
             if form.is_valid():
-                form.save()
-                return redirect('home')
+                food_item = form.save(commit=False)
+                food_item.save()
+                
+                food_item.customer.set([cust])
+                food_item.fooditem.set(form.cleaned_data['fooditem'])
+                return redirect('user_page')
         return render(request, 'fit/add_food_item.html', {'form':form})
     else:
         return redirect('login')
 
+def setCalories(request):
+    calForm = calorieForm()
+    
+    if request.method == 'POST':
+        calForm = calorieForm(request.POST)
+        if calForm.is_valid():
+            User = request.user
+            calories = calForm.cleaned_data['calories']
+            calorie.objects.create(
+                users = User,
+                calories = calories
+            )
+            return redirect('user_page')
+    else:
+        return render(request, 'fit/calories.html', {'calForm':calForm})
+
+def updateCalories(request):
+    calForm = calorieForm()       
+    if request.method == 'POST':
+        calForm = calorieForm(request.POST)
+        if calForm.is_valid():
+            User = request.user
+            calories = calForm.cleaned_data['calories']
+            calorie.objects.update(
+                users = User,
+                calories = calories
+            )
+            return redirect('home')
+    else:
+        return render(request, 'fit/calories_update.html', {'calForm':calForm})
+
 def userPageView(request):
+    
     if request.user.is_authenticated:
         user = request.user
+        
         if hasattr(user, 'customer'):
             cust = user.customer 
+            
             foodItems = foodItem.objects.filter()
             myFilter = foodItemFilter(request.GET,queryset=foodItems)
             foodItems = myFilter.qs
+            
             total = userFoodItem.objects.all()
             myFoodItems = total.filter(customer = cust)
             Count = myFoodItems.count()
             querysetFood = []
+            
             for food in myFoodItems:
                 querysetFood.append(food.fooditem.all())
+                
             finalFoodItems = []
+            
             for items in querysetFood:
                 for food_items in items:
                     finalFoodItems.append(food_items)
+                    
             totalCalories = 0
+            
             for foods in finalFoodItems:
                 totalCalories += foods.calorie
-            caloriesLeft = 2000 - totalCalories
+                
+            try:
+                calories = calorie.objects.get(users=user)
+                caloriesLeft = calories.calories - totalCalories
+            except calorie.DoesNotExist:
+                calories = None
+                caloriesLeft = 2000
+                
+            
+                
         else:
             cust = None
             foodItems = []
@@ -120,13 +174,16 @@ def userPageView(request):
             finalFoodItems = []
             totalCalories = 0
             caloriesLeft = 2000
+            
+    clearFoodItems.delay()
+    
     context = {
         'CalorieLeft':caloriesLeft,
         'totalCalories':totalCalories,
         'cnt':Count,
         'foodlist':finalFoodItems,
         'fooditem':foodItems,
-        'myfilter':myFilter
+        'myfilter':myFilter,
+        'Calories':calories
     }
     return render(request, 'fit/user_page.html', context)
-            

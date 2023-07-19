@@ -1,0 +1,12 @@
+{% extends 'fit/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="center-object">
+    <form action="" method="post">
+        <legend><h2>Update you calorie goal</h2></legend>
+        {% csrf_token %}
+        {{calForm|crispy}}
+        <input type="submit" class="btn btn-info" value="Submit">
+    </form>
+</div>
+{% endblock content %}

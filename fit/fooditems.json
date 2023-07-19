@@ -1,0 +1,505 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "name": "Oatmeal",
+      "category": "breakfast",
+      "carbohydrate": 27,
+      "fats": 3,
+      "protein": 5,
+      "calorie": 150,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "Eggs",
+      "category": "breakfast",
+      "carbohydrate": 1,
+      "fats": 10,
+      "protein": 13,
+      "calorie": 140,
+      "quantity": 2
+    },
+    {
+      "id": 3,
+      "name": "Greek Yogurt",
+      "category": "breakfast",
+      "carbohydrate": 9,
+      "fats": 2,
+      "protein": 20,
+      "calorie": 120,
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "name": "Avocado Toast",
+      "category": "breakfast",
+      "carbohydrate": 15,
+      "fats": 15,
+      "protein": 5,
+      "calorie": 200,
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "name": "Banana",
+      "category": "snacks",
+      "carbohydrate": 27,
+      "fats": 0.4,
+      "protein": 1.3,
+      "calorie": 105,
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "name": "Apple",
+      "category": "snacks",
+      "carbohydrate": 25,
+      "fats": 0.3,
+      "protein": 0.5,
+      "calorie": 95,
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "name": "Carrot Sticks",
+      "category": "snacks",
+      "carbohydrate": 12,
+      "fats": 0.2,
+      "protein": 1.2,
+      "calorie": 50,
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "name": "Almonds",
+      "category": "snacks",
+      "carbohydrate": 6,
+      "fats": 14,
+      "protein": 6,
+      "calorie": 160,
+      "quantity": 1
+    },
+    {
+      "id": 9,
+      "name": "Chicken Breast",
+      "category": "lunch",
+      "carbohydrate": 0,
+      "fats": 3.6,
+      "protein": 31,
+      "calorie": 165,
+      "quantity": 1
+    },
+    {
+      "id": 10,
+      "name": "Salmon",
+      "category": "lunch",
+      "carbohydrate": 0,
+      "fats": 13,
+      "protein": 39,
+      "calorie": 280,
+      "quantity": 1
+    },
+    {
+      "id": 11,
+      "name": "Quinoa Salad",
+      "category": "lunch",
+      "carbohydrate": 40,
+      "fats": 4,
+      "protein": 8,
+      "calorie": 210,
+      "quantity": 1
+    },
+    {
+      "id": 12,
+      "name": "Turkey Sandwich",
+      "category": "lunch",
+      "carbohydrate": 45,
+      "fats": 10,
+      "protein": 18,
+      "calorie": 320,
+      "quantity": 1
+    },
+    {
+      "id": 13,
+      "name": "Steak",
+      "category": "dinner",
+      "carbohydrate": 0,
+      "fats": 18,
+      "protein": 26,
+      "calorie": 250,
+      "quantity": 1
+    },
+    {
+      "id": 14,
+      "name": "Pasta",
+      "category": "dinner",
+      "carbohydrate": 57,
+      "fats": 4,
+      "protein": 11,
+      "calorie": 310,
+      "quantity": 1
+    },
+    {
+      "id": 15,
+      "name": "Vegetable Stir-Fry",
+      "category": "dinner",
+      "carbohydrate": 30,
+      "fats": 8,
+      "protein": 5,
+      "calorie": 200,
+      "quantity": 1
+    },
+    {
+      "id": 16,
+      "name": "Salad",
+      "category": "dinner",
+      "carbohydrate": 10,
+      "fats": 5,
+      "protein": 5,
+      "calorie": 120,
+      "quantity": 1
+    },
+    {
+      "id": 17,
+      "name": "Blueberries",
+      "category": "snacks",
+      "carbohydrate": 21,
+      "fats": 0.3,
+      "protein": 1,
+      "calorie": 85,
+      "quantity": 1
+    },
+    {
+      "id": 18,
+      "name": "Oranges",
+      "category": "snacks",
+      "carbohydrate": 15,
+      "fats": 0.2,
+      "protein": 1.2,
+      "calorie": 62,
+      "quantity": 1
+    },
+    {
+      "id": 19,
+      "name": "Peanut Butter",
+      "category": "snacks",
+      "carbohydrate": 7,
+      "fats": 16,
+      "protein": 8,
+      "calorie": 190,
+      "quantity": 1
+    },
+    {
+      "id": 20,
+      "name": "Cucumber Slices",
+      "category": "snacks",
+      "carbohydrate": 4,
+      "fats": 0.2,
+      "protein": 0.6,
+      "calorie": 16,
+      "quantity": 1
+    },
+    {
+      "id": 21,
+      "name": "Pancakes",
+      "category": "breakfast",
+      "carbohydrate": 50,
+      "fats": 3,
+      "protein": 6,
+      "calorie": 250,
+      "quantity": 2
+    },
+    {
+      "id": 22,
+      "name": "Bacon",
+      "category": "breakfast",
+      "carbohydrate": 0,
+      "fats": 12,
+      "protein": 3,
+      "calorie": 42,
+      "quantity": 2
+    },
+    {
+      "id": 23,
+      "name": "Waffles",
+      "category": "breakfast",
+      "carbohydrate": 30,
+      "fats": 10,
+      "protein": 5,
+      "calorie": 250,
+      "quantity": 2
+    },
+    {
+      "id": 24,
+      "name": "Cereal",
+      "category": "breakfast",
+      "carbohydrate": 30,
+      "fats": 2,
+      "protein": 4,
+      "calorie": 120,
+      "quantity": 1
+    },
+    {
+      "id": 25,
+      "name": "Bagel",
+      "category": "breakfast",
+      "carbohydrate": 56,
+      "fats": 2,
+      "protein": 11,
+      "calorie": 280,
+      "quantity": 1
+    },
+    {
+      "id": 26,
+      "name": "Yogurt Parfait",
+      "category": "breakfast",
+      "carbohydrate": 40,
+      "fats": 5,
+      "protein": 10,
+      "calorie": 220,
+      "quantity": 1
+    },
+    {
+      "id": 27,
+      "name": "Tuna Sandwich",
+      "category": "lunch",
+      "carbohydrate": 30,
+      "fats": 8,
+      "protein": 20,
+      "calorie": 350,
+      "quantity": 1
+    },
+    {
+      "id": 28,
+      "name": "Chicken Salad",
+      "category": "lunch",
+      "carbohydrate": 10,
+      "fats": 8,
+      "protein": 25,
+      "calorie": 300,
+      "quantity": 1
+    },
+    {
+      "id": 29,
+      "name": "Veggie Wrap",
+      "category": "lunch",
+      "carbohydrate": 45,
+      "fats": 7,
+      "protein": 12,
+      "calorie": 280,
+      "quantity": 1
+    },
+    {
+      "id": 30,
+      "name": "Pizza",
+      "category": "dinner",
+      "carbohydrate": 36,
+      "fats": 12,
+      "protein": 14,
+      "calorie": 285,
+      "quantity": 1
+    },
+    {
+      "id": 31,
+      "name": "Burger",
+      "category": "dinner",
+      "carbohydrate": 42,
+      "fats": 17,
+      "protein": 25,
+      "calorie": 350,
+      "quantity": 1
+    },
+    {
+      "id": 32,
+      "name": "Sushi Roll",
+      "category": "dinner",
+      "carbohydrate": 38,
+      "fats": 10,
+      "protein": 20,
+      "calorie": 330,
+      "quantity": 1
+    },
+    {
+      "id": 33,
+      "name": "Lasagna",
+      "category": "dinner",
+      "carbohydrate": 52,
+      "fats": 17,
+      "protein": 20,
+      "calorie": 380,
+      "quantity": 1
+    },
+    {
+      "id": 34,
+      "name": "Chocolate Chip Cookies",
+      "category": "snacks",
+      "carbohydrate": 19,
+      "fats": 10,
+      "protein": 2,
+      "calorie": 160,
+      "quantity": 1
+    },
+    {
+      "id": 35,
+      "name": "Popcorn",
+      "category": "snacks",
+      "carbohydrate": 20,
+      "fats": 5,
+      "protein": 3,
+      "calorie": 100,
+      "quantity": 1
+    },
+    {
+      "id": 36,
+      "name": "Pretzels",
+      "category": "snacks",
+      "carbohydrate": 22,
+      "fats": 1,
+      "protein": 3,
+      "calorie": 110,
+      "quantity": 1
+    },
+    {
+      "id": 37,
+      "name": "Ice Cream",
+      "category": "snacks",
+      "carbohydrate": 30,
+      "fats": 12,
+      "protein": 4,
+      "calorie": 250,
+      "quantity": 1
+    },
+    {
+      "id": 38,
+      "name": "Grilled Cheese Sandwich",
+      "category": "lunch",
+      "carbohydrate": 30,
+      "fats": 12,
+      "protein": 12,
+      "calorie": 320,
+      "quantity": 1
+    },
+    {
+      "id": 39,
+      "name": "Fish and Chips",
+      "category": "dinner",
+      "carbohydrate": 54,
+      "fats": 22,
+      "protein": 18,
+      "calorie": 450,
+      "quantity": 1
+    },
+    {
+      "id": 40,
+      "name": "Fried Chicken",
+      "category": "dinner",
+      "carbohydrate": 5,
+      "fats": 18,
+      "protein": 25,
+      "calorie": 320,
+      "quantity": 1
+    },
+    {
+      "id": 41,
+      "name": "Hot Dog",
+      "category": "dinner",
+      "carbohydrate": 25,
+      "fats": 16,
+      "protein": 7,
+      "calorie": 290,
+      "quantity": 1
+    },
+    {
+      "id": 42,
+      "name": "Muffin",
+      "category": "snacks",
+      "carbohydrate": 40,
+      "fats": 10,
+      "protein": 5,
+      "calorie": 280,
+      "quantity": 1
+    },
+    {
+      "id": 43,
+      "name": "Fruit Smoothie",
+      "category": "snacks",
+      "carbohydrate": 30,
+      "fats": 2,
+      "protein": 2,
+      "calorie": 140,
+      "quantity": 1
+    },
+    {
+      "id": 44,
+      "name": "Trail Mix",
+      "category": "snacks",
+      "carbohydrate": 25,
+      "fats": 18,
+      "protein": 7,
+      "calorie": 320,
+      "quantity": 1
+    },
+    {
+      "id": 45,
+      "name": "Pork Chops",
+      "category": "dinner",
+      "carbohydrate": 0,
+      "fats": 15,
+      "protein": 26,
+      "calorie": 250,
+      "quantity": 1
+    },
+    {
+      "id": 46,
+      "name": "Meatball Sub",
+      "category": "lunch",
+      "carbohydrate": 40,
+      "fats": 15,
+      "protein": 25,
+      "calorie": 380,
+      "quantity": 1
+    },
+    {
+      "id": 47,
+      "name": "Baked Potato",
+      "category": "dinner",
+      "carbohydrate": 37,
+      "fats": 0.2,
+      "protein": 4.3,
+      "calorie": 161,
+      "quantity": 1
+    },
+    {
+      "id": 48,
+      "name": "Shrimp Scampi",
+      "category": "dinner",
+      "carbohydrate": 9,
+      "fats": 10,
+      "protein": 25,
+      "calorie": 320,
+      "quantity": 1
+    },
+    {
+      "id": 49,
+      "name": "Sausage",
+      "category": "breakfast",
+      "carbohydrate": 2,
+      "fats": 14,
+      "protein": 12,
+      "calorie": 170,
+      "quantity": 2
+    },
+    {
+      "id": 50,
+      "name": "Cottage Cheese",
+      "category": "breakfast",
+      "carbohydrate": 6,
+      "fats": 2,
+      "protein": 13,
+      "calorie": 90,
+      "quantity": 1
+    }
+  ]
+}
+  

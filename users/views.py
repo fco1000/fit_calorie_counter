@@ -21,10 +21,12 @@ def userCreationView(request):
         form = UserSignUpForm(request.POST)
         username = request.POST['username']
         email = request.POST['email']
+        password = request.POST['password1']
         group = Group.objects.get(name='user')
         User = user.objects.create_user(
             username=username,
-            email=email
+            email=email,
+            password=password
         )
         User.groups.add(group)
         login(request,User)

@@ -37,11 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_filters',
     'crispy_forms',
     'crispy_bootstrap5',
     'users.apps.UsersConfig',
     'fit.apps.FitConfig',
-    'bmi_app.apps.BmiAppConfig'
+    'bmi_app.apps.BmiAppConfig',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
@@ -136,7 +137,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'example@gmail.com'#THE EMAIL
-EMAIL_HOST_PASSWORD = 'password' 
+EMAIL_HOST_USER = 'fco1000djangodev@gmail.com'#THE EMAIL
+EMAIL_HOST_PASSWORD = 'ynkticywdicftsju' 
 
-DEFAULT_FROM_EMAIL = 'example@gmail.com'
+DEFAULT_FROM_EMAIL = 'fco1000djangodev@gmail.com'
+

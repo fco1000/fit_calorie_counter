@@ -5,6 +5,8 @@ from .views import (
     createFoodItemView,
     foodItemView,
     addFoodItemView,
+    setCalories,
+    updateCalories
 )
 
 urlpatterns = [
@@ -13,4 +15,6 @@ urlpatterns = [
     path('create_food_item/',createFoodItemView,name='createFoodItem'),
     path('product/',foodItemView,name='foodItem'),
     path('add_food_item/',addFoodItemView,name='addFoodItem'),
+    path('set_calories/',setCalories,name='setCalories'),
+    path('update_calories/',updateCalories,name='update_Calories'),
 ]

@@ -14,7 +14,15 @@
 <div class="today">
 	<h2>Tracker</h2>
 	<div class="flex-box-row">
-		<h3>Calorie Limit: 2000</h3>
+		<h3>Calorie Limit: 
+			{% if Calories %}
+				{{ Calories.calories }} &nbsp; <a href="{% url 'update_Calories' %}" class="btn btn-info text-dark"><i class="bi bi-vector-pen"></i>update</a>
+			{% else %}
+				<a href="{% url 'setCalories' %}" class="btn btn-success text-dark">Set Goal</a>
+			{% endif %}
+
+			
+		</h3>
 		<h3>totalCalories consumed: {{totalCalories}}</h3>
 		<h3>Left: {{ CalorieLeft }}</h3>
 	</div>
@@ -90,7 +98,7 @@
 {% else %}
 <div></div>
 	<div class="alert alert-primary" role="alert">
-		<h3>Please <a style="color: #333;" href="{% url 'login' %}">Login</a> to access all the features</h3>
+		<h3>Please <a style="color: #333;" href="{% url 'register' %}">Sign up</a> to access all the features</h3>
 	  </div>
 	<h3>Total number of items consumed today: 0</h3>
 
